@@ -29,3 +29,9 @@ npm run dev
 - `package-log.json`: se crea de forma automática por eficiencia para recrear el proyecto
 - `tsconfig.json`: archivo de configuración que nos permite configurar cómo typescript queremos que trabaje en el proyecto. De momento lo dejaremos así.
 - `src`: carpeta de source.
+
+
+
+
+# Referencias
+Ejemplo original de Fernando Herrera
