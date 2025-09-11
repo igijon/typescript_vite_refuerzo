@@ -1,4 +1,20 @@
-const ironman = {
+//Cuando se hace la transpilación, las interfaces no tienen equivalencia en JS, 0 líneas de código
+//añadidas
+//UpperCamelCase
+interface Person {
+    firstName: string;
+    lastName: string;
+    age: number;
+    address: Address;
+
+}
+
+interface Address {
+    postalCode: number;
+    city: string;
+}
+
+const ironman: Person = {
     firstName: 'Tony',
     lastName: 'Stark',
     age: 45,
