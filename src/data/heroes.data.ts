@@ -5,13 +5,13 @@ enum Owner { //Esto sí crea un objeto
     Marvel = 'Marvel' //1
 }
 
-interface Hero {
+export interface Hero {
     id: number;
     name: string;
     owner: Owner;
 }
 
-const heroes: Hero[] = [
+export const heroes: Hero[] = [
   {
     id: 1,
     name: 'Batman',
@@ -38,3 +38,5 @@ const heroes: Hero[] = [
     owner: Owner.Marvel,
   },
 ];
+
+//export default heroes;
