@@ -14,3 +14,19 @@ const [ letters, numbers ] = returnsArrayFn();
 
 console.log(numbers + 100);
 console.log(letters + 100);
+
+//Tarea: Implementar useState
+
+const useState = ( initialValue: string ) => {
+    return [ 
+        initialValue, 
+        ( value: string  ) => {
+            console.log( value );
+        
+        }
+    ] as const;
+}
+
+const [ name, setName ] = useState('Goku');
+console.log( name );
+setName('Vegueta');
