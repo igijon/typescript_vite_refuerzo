@@ -1,6 +1,6 @@
 //import heroes from "../data/heroes.data"
 
-import { heroes, type Hero } from "../data/heroes.data" //type hace que la importación sea más eficiente
+import { heroes, Owner, type Hero } from "../data/heroes.data" //type hace que la importación sea más eficiente
 
 
 const getHeroById = (id: number): Hero|undefined => {
@@ -16,3 +16,7 @@ const getHeroById = (id: number): Hero|undefined => {
 }
 
 console.log(getHeroById(3));
+
+export const getHeroesByOwner = ( owner: Owner ) => {
+    return heroes.filter(hero => hero.owner === owner);
+}

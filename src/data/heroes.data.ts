@@ -1,6 +1,6 @@
 // type  Owner = 'DC' | 'Marvel'; //Esto es una regla, no crea un objeto
 
-enum Owner { //Esto sí crea un objeto 
+export enum Owner { //Esto sí crea un objeto 
     DC = 'DC', //0 si no pongo un valor por defecto
     Marvel = 'Marvel' //1
 }
