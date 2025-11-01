@@ -6,7 +6,6 @@ interface Person {
     lastName: string;
     age: number;
     address: Address;
-
 }
 
 interface Address {

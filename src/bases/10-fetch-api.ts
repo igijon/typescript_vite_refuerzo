@@ -1,3 +1,5 @@
+import type { GiphyRandomResponse } from "../data/giphy.response";
+
 const API_KEY = 'zBi9eWvvQh8nO7b8DyMu8nqvzG3ec5DH';
 
 const myRequest = fetch(
@@ -14,15 +16,25 @@ const myRequest = fetch(
 //     console.error(err);
 // });
 
+const createImageInsideDOM = (url: string) => {
+    const imgElement = document.createElement('img');
+    imgElement.src = url;
+    document.body.append(imgElement);   
+}
 
 myRequest
 .then ( (response) => response.json())
-.then((data) => {
-    const imageUrl = data.data.images.original.url;
-    console.log(imageUrl);
-    const imgElement = document.createElement('img');
-    imgElement.src = imageUrl;
-    document.body.append(imgElement);
+// .then((data: GiphyRandomResponse) => {
+    // const imageUrl = data.data.images.original.url;
+    // console.log(imageUrl);
+    // const imgElement = document.createElement('img');
+    // imgElement.src = imageUrl;
+    // document.body.append(imgElement);
+    // })
+    //Hago la desestructuración para evitar data.data
+.then(({data}: GiphyRandomResponse) => {
+    const imageUrl = data.images.original.url;
+    createImageInsideDOM(imageUrl);
 })
 .catch( err => {
     console.error(err);
